@@ -1,44 +1,43 @@
-const Discord = require('discord.js');  //WESO#0001
-const client = new Discord.Client();  //WESO#0001
+const Discord = require('discord.js');  IMADOX
+const client = new Discord.Client();  IMADOX
 const moment = require('moment');
-const zalgo = require('zalgolize');  //WESO#0001
-const math = require('math-expression-evaluator');   //WESO#0001 
-const figlet = require('figlet');   //WESO#0001
-const fs = require('fs');  //WESO#0001
-const ms = require('ms');  //WESO#0001
+const zalgo = require('zalgolize');  IMADOX
+const math = require('math-expression-evaluator');   IMADOX 
+const figlet = require('figlet');   IMADOX
+const fs = require('fs');  IMADOX
+const ms = require('ms');  IMADOX
 const prefix = '-'
 
-client.on('message', msg => {  //WESO#0001
-    if (msg.content === 'باك') {  //WESO#0001
-      msg.reply('** :wink: وِلِـكُمِـ ﻧَوِرُتْ   :sparkling_heart:**');  //WESO#0001
+client.on('message', msg => {  IMADOX
+    if (msg.content === 'باك') {  IMADOX
+      msg.reply('** :wink: وِلِـكُمِـ ﻧَوِرُتْ   :sparkling_heart:**');  IMADOX
     }
   });
 
-client.on('message', msg => {  //WESO#0001
-    if (msg.content === 'ويسو') {  //WESO#0001
-      msg.reply('**ويسو مات**');  //WESO#0001
+client.on('message', msg => {  IMADOX
+    if (msg.content === 'ويسو') {  IMADOX
+      msg.reply('**ويسو مات**');  IMADOX
     }
   });
 
 
-client.on('message', msg => {  //WESO#0001
-    if (msg.content === 'احبك') {  //WESO#0001
-      msg.reply('**لاتحتك يا اخوي لو سمحت**');  //WESO#0001
-    }
+client.on('message', msg => {  IMADOX
+    if (msg.content === 'احبك') {  IMADOX
+      msg.reply('**لاتحتك يا اخوي لو سمحت**');  IMADOX
   });
   
 
-  client.on('message', msg => {  //WESO#0001
-    if (msg.content === 'احبك') {  //WESO#0001
-      msg.reply('**حبك برص يا سافل**');  //WESO#0001
+  client.on('message', msg => {  IMADOX
+    if (msg.content === 'احبك') {  IMADOX
+      msg.reply('**حبك برص يا سافل**');  IMADOX
     }
   });
 
 
   
-   client.on('message', msg => {  //WESO#0001
-    if (msg.content === 'هلا') {  //WESO#0001
-      msg.reply('**هلا بيك :heart: **');  //WESO#0001
+   client.on('message', msg => { IMADOX
+    if (msg.content === 'هلا') {  IMADOX
+      msg.reply('**هلا بيك :heart: **');  IMADOX
     }
   });
 
@@ -46,9 +45,9 @@ client.on('message', msg => {  //WESO#0001
 
 
   
-  client.on("message", message => {  //WESO#0001
-    if(message.content.startsWith(prefix + 'v2min')) {  //WESO#0001
-     let args = message.content.split(" ").slice(1);  //WESO#0001
+  client.on("message", message => {  IMADOX
+    if(message.content.startsWith(prefix + 'v2min')) {  IMADOX
+     let args = message.content.split(" ").slice(1);  IMADOX
        var nam = args.join(' ');
     
       if(!message.member.hasPermission('ADMINISTRATOR')) return    message.channel.send('`ADMINISTRATOR` للأسف هذه الخاصية تحتاج الى ').then(msg => msg.delete(6000))
@@ -117,12 +116,11 @@ client.on('message',async message => {  //WESO#0001
     };
  
   }
-  if(message.content.startsWith(prefix + "clan")) {  //WESO#0001
-    if(message.content.split(' ')[0] !== `${prefix}clan`) return;  //WESO#0001
+  if(message.content.startsWith(prefix + "clan")) {  IMADOX
  
-    if(!args[1] || args[1] && args[1] === 'info') {  //WESO#0001
+    if(!args[1] || args[1] && args[1] === 'info') {  IMADOX
   let embed = new Discord.RichEmbed()
-  .setAuthor('الكلانات', message.author.avatarURL)  //WESO#0001
+  .setAuthor('الكلانات', message.author.avatarURL)  IMADOX
   .setDescription(`- \`${prefix}clan\`: نظام الكلانات هو نظام شبه مسلي ينمي التفاعل ويمكنك التحكم بالكلان تبعك بشكل كامل
   - \`${prefix}clan info\`: لأظهار رسالة الأوامر ( هذه الرسالة ) ء
   - \`${prefix}clan create\`: لأنشاء كلان بالأسم الذي تريده
@@ -139,11 +137,11 @@ client.on('message',async message => {  //WESO#0001
   - \`${prefix}clan accept\`: لقبول شخص وجعل الشخص يدخل الكلان ( يتطلب صلاحية الادمن ) ء
   - \`${prefix}clan decline\`: لرفض شخص وعم جعل الشخص يدخل الكلان ( يطلب صلاحية الادمن ) ء
   - \`${prefix}clan room\`: لعمل روم شات او كتابي بأسم الكلان ( صاحب الكلان فقط ) ء`)
-  .setFooter(message.author.username, message.author.avatarURL);  //WESO#0001
+  .setFooter(message.author.username, message.author.avatarURL);  IMADOX
   message.channel.send(embed);
 }
  
-    if(args[1] && args[1] === 'create') {  //WESO#0001
+    if(args[1] && args[1] === 'create') {  IMADOX
       if(level[author.id].level < 10) return message.channel.send('**# يجب أن يكون لديك 10 مستويات لعمل كلان , لتجميع مستويات تفاعل بالشات وسيتم حساب النقاط**');
       if(system[author.id].clan !== 'None') return message.channel.send('**# يجب عليك ان تخرج من الكلان الذي أنت به حاليا**');
  
@@ -152,130 +150,128 @@ client.on('message',async message => {  //WESO#0001
         if(collected.first().content.length > 25) return message.channel.send("**# لا يمكنك وضع اسم للكلان يفوق الـ25 حرفا , أعد كابة الأمر**");
         if(collected.first().content.includes("None")) return message.channel.send("**# `None`, لا يمكنك وضع هذه الكلمة كأسم للكلان**");
         collected.first().delete().catch();
-        nameClan = collected.first().content;  //WESO#0001
-      });
- 
-      m = await m.edit('**# جارى عمل الكلان**');  //WESO#0001
-      awaited = await setTimeout(async() => {  //WESO#0001
+        nameClan = collected.first().content;  IMADOX
+      m = await m.edit('**# جارى عمل الكلان**');  IMADOX
+      awaited = await setTimeout(async() => {  IMADOX
         let membersArray = {
           nameClan: {
             array: []
           }
         };
-        let members = membersArray.nameClan.array;  //WESO#0001
+        let members = membersArray.nameClan.array; IMADOX
         members.push(message.author.id);
         clans[nameClan] = {
           name: nameClan,
-          createdAt: new Date().toLocaleString(),  //WESO#0001
+          createdAt: new Date().toLocaleString(), IMADOX
           level: levelClan,
-          creator: message.author.id,  //WESO#0001
-          members: members,  //WESO#0001
-          applylist: [],  //WESO#0001
-          admins: []  //WESO#0001  //WESO#0001
+          creator: message.author.id,  IMADOX
+          members: members,  IMADOX
+          applylist: [],  IMADOX
+          admins: []  IMADOX
         };
  
-        system[author.id] = {  //WESO#0001
-          clan: nameClan,  //WESO#0001
-          joinedAt: new Date().toLocaleString(),  //WESO#0001
-          clanLevel: 0,  //WESO#0001
-          creator: message.author.id  //WESO#0001
+        system[author.id] = {  IMADOX
+          clan: nameClan,  IMADOX
+          joinedAt: new Date().toLocaleString(),  IMADOX
+          clanLevel: 0,  IMADOX
+          creator: message.author.id  IMADOX
         };
  
-        m = await m.edit('**# تم عمل الكلان بنجاح**');  //WESO#0001
+        m = await m.edit('**# تم عمل الكلان بنجاح**');  IMADOX
       }, 2300);
  
     }
-    if(args[1] && args[1] === 'invite') {  //WESO#0001
-      if(!system[author.id]) return message.channel.send("**# أنت لست بكلان**");  //WESO#0001
+    if(args[1] && args[1] === 'invite') {  IMADOX
+      if(!system[author.id]) return message.channel.send("**# أنت لست بكلان**");  IMADOX
       let clan = system[author.id].clan;
-      if(system[author.id].clan === 'None') return message.channel.send('**# أنت لست بكلان**');  //WESO#0001
+      if(system[author.id].clan === 'None') return message.channel.send('**# أنت لست بكلان**'); IMADOX
       if(!clans[clan].admins.includes(message.author.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send('**# يجب عليك ان تكون اداري بالكلان**');
-      let mention = message.mentions.users.first();  //WESO#0001
-      if(!mention) return message.channel.send('**# منشن شخص لدعوته للكلان**');  //WESO#0001
-      if(clans[clan].members.includes(mention.id)) return message.channel.send("**# هذا العضو بالكلان بالفعل**");  //WESO#0001
-      if(clans[clan].members.length === 10) return message.channel.send("**# هذا الكلان وصل للحد الاقصى من الاعضاء يمكنك**");  //WESO#0001
-   //WESO#0001  //WESO#0001  //WESO#0001  //WESO#0001  //WESO#0001
+      let mention = message.mentions.users.first();  IMADOX
+      if(!mention) return message.channel.send('**# منشن شخص لدعوته للكلان**');  IMADOX
+      if(clans[clan].members.includes(mention.id)) return message.channel.send("**# هذا العضو بالكلان بالفعل**");  IMADOX
+      if(clans[clan].members.length === 10) return message.channel.send("**# هذا الكلان وصل للحد الاقصى من الاعضاء يمكنك**");  IMADOX
+   IMADOX
       let m = await message.channel.send(`**${mention} # \`${clan}\`, تم دعوتك لدخول الكلان**\n\n - لقبول الدعوة \`نعم\`\n - لرفض الدعوة \`لا\``);
       let awaiting = await message.channel.awaitMessages(r => r.author.id === mention.id, {max: 1, time: 20000, errors:['time']}).then(collected => {
-        collected.first().delete().catch();  //WESO#0001
-        if(collected.first().content === 'نعم') {  //WESO#0001
-          clans[clan].members.push(mention.id);  //WESO#0001
+        collected.first().delete().catch();  IMADOX
+        if(collected.first().content === 'نعم') {  IMADOX
+          clans[clan].members.push(mention.id);  IMADOX
  
-          system[author.id].members += 1;  //WESO#0001
+          system[author.id].members += 1;  IMADOX
  
  
           system[mention.id] = {  //WESO#0001
             clan: clan,
-            joinedAt: new Date().toLocaleString(),  //WESO#0001
+            joinedAt: new Date().toLocaleString(),  IMADOX
             clanLevel: 0,
-            creator: clans[clan].creator  //WESO#0001
+            creator: clans[clan].creator  IMADOX
           };
  
-          message.channel.send(`**${message.author} # تم قبول الدعوة**`);  //WESO#0001
-        }  //WESO#0001
-        if(collected.first().content === 'لا') {  //WESO#0001
-          message.channel.send(`**${message.author} # تم رفض الدعوة**`);  //WESO#0001
-        } else if(collected.first().content !== 'نعم' && collected.first().content !== 'لا'){  //WESO#0001
-          return message.channel.send('**# يجب عليك كتابة `نعم` أو `لا`**');  //WESO#0001
-        }  //WESO#0001
-      });  //WESO#0001
-    }  //WESO#0001
+          message.channel.send(`**${message.author} # تم قبول الدعوة**`);  IMADOX
+        }  IMADOX
+        if(collected.first().content === 'لا') {  IMADOX
+          message.channel.send(`**${message.author} # تم رفض الدعوة**`);  IMADOX
+        } else if(collected.first().content !== 'نعم' && collected.first().content !== 'لا'){  IMADOX
+          return message.channel.send('**# يجب عليك كتابة `نعم` أو `لا`**');  IMADOX
+        }  IMADOX
+      });  IMADOX
+    }  IMADOX
     if(args[1] && args[1] === 'stats') {
-      if(system[author.id].clan === 'None') return message.channel.send('**# يجب ان تكون بكلان لأستخدام هذا الأمر**');  //WESO#0001
-      let clan = system[author.id].clan;  //WESO#0001
-      let embed = new Discord.RichEmbed()  //WESO#0001
-        .setAuthor(`${message.author.username} || الكلانات`, message.author.avatarURL)  //WESO#0001
-        .setDescription(`الكلان || \`${clan.toString()}\``)  //WESO#0001
-        embed.addField('» اسم الكلان', clan, true)  //WESO#0001
-        embed.addField('» تاريخ عمل الكلان', clans[clan].createdAt, true);  //WESO#0001
-        embed.addField('» تاريخ دخول الكلان', system[author.id].joinedAt, true)  //WESO#0001
-        embed.addField('» صاحب الكلان', `<@${clans[clan].creator}>`, true);  //WESO#0001
-        embed.addField('» لفل الكلان', clans[clan].level, true);  //WESO#0001
-        embed.addField('» عدد اعضاء الكلان', clans[clan].members.length, true);  //WESO#0001
-        embed.addField('» عدد التقديمات للكلان', clans[clan].applylist.length, true);  //WESO#0001
-        embed.addField('» عدد الادمنية بالكلان', clans[clan].admins.length, true);  //WESO#0001
-        embed.addField('» اعضاء الكلان', `${prefix}clan list || يظهرلك رسالة بها اعضاء الكلان`);  //WESO#0001
-      message.channel.send(embed);  //WESO#0001
+      if(system[author.id].clan === 'None') return message.channel.send('**# يجب ان تكون بكلان لأستخدام هذا الأمر**');  IMADOX
+      let clan = system[author.id].clan;  IMADOX
+      let embed = new Discord.RichEmbed()  IMADOX
+        .setAuthor(`${message.author.username} || الكلانات`, message.author.avatarURL)  IMADOX
+        .setDescription(`الكلان || \`${clan.toString()}\``) IMADOX
+        embed.addField('» اسم الكلان', clan, true)  IMADOX
+        embed.addField('» تاريخ عمل الكلان', clans[clan].createdAt, true);  IMADOX
+        embed.addField('» تاريخ دخول الكلان', system[author.id].joinedAt, true)  IMADOX
+        embed.addField('» صاحب الكلان', `<@${clans[clan].creator}>`, true);  IMADOX
+        embed.addField('» لفل الكلان', clans[clan].level, true);  IMADOX
+        embed.addField('» عدد اعضاء الكلان', clans[clan].members.length, true);  IMADOX
+        embed.addField('» عدد التقديمات للكلان', clans[clan].applylist.length, true);  IMADOX
+        embed.addField('» عدد الادمنية بالكلان', clans[clan].admins.length, true);  IMADOX
+        embed.addField('» اعضاء الكلان', `${prefix}clan list || يظهرلك رسالة بها اعضاء الكلان`);  IMADOX
+      message.channel.send(embed);  IMADOX
  
     }
-    if(args[1] && args[1] === 'join') {  //WESO#0001  //WESO#0001
-    let clanName = message.content.split(' ').slice(2).join(" ");  //WESO#0001
-    if(system[author.id].clan !== 'None') return message.channel.send("**# يجب أن لا تكون بكلان**");  //WESO#0001
-    if(!args[2]) return message.channel.send("**# يجب عليك كتابة اسم الكلان**");  //WESO#0001
-    if(!clans[clanName]) return message.channel.send("**# هذا الكلان غير موجود**");  //WESO#0001
-    if(clans[clanName].applylist.includes(message.author.id)) return message.channel.send("**# لقد قدمت على دخول هذا الكلان مسبقا");  //WESO#0001
-   //WESO#0001  //WESO#0001  //WESO#0001
-    clans[clanName].applylist.push(message.author.id);  //WESO#0001
-    message.channel.send("**# لقد تم التقديم على دخول الكلان , سيتم الرد عليك من قبل احد ادارة الكلان**");  //WESO#0001
+    if(args[1] && args[1] === 'join') { IMADOX
+    let clanName = message.content.split(' ').slice(2).join(" ");  IMADOX
+    if(system[author.id].clan !== 'None') return message.channel.send("**# يجب أن لا تكون بكلان**");  IMADOX
+    if(!args[2]) return message.channel.send("**# يجب عليك كتابة اسم الكلان**");  IMADOX
+    if(!clans[clanName]) return message.channel.send("**# هذا الكلان غير موجود**");  IMADOX
+    if(clans[clanName].applylist.includes(message.author.id)) return message.channel.send("**# لقد قدمت على دخول هذا الكلان مسبقا");  IMADOX
+   IMADOX
+    clans[clanName].applylist.push(message.author.id);  IMADOX
+    message.channel.send("**# لقد تم التقديم على دخول الكلان , سيتم الرد عليك من قبل احد ادارة الكلان**");  IMADOX
  
   }
-    if(args[1] && args[1] === 'accept') {  //WESO#0001
+    if(args[1] && args[1] === 'accept') {  IMADOX
       let mention = message.mentions.users.first();
-      if(system[author.id].clan === 'None') return message.channel.send("**# يجب عليك ان تكون بكلان لأستخدام هذا الأمر**");  //WESO#0001
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب عليك ان تكون بكلان لأستخدام هذا الأمر**");  IMADOX
       if(!clans[system[author.id].clan].admins.includes(message.author.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# يجب عليك ان تكون اداري بالكلان لأستخدام هذا الأمر**");
       if(!mention) return message.channel.send("**# يجب عليك منشنة شخص لأستخدام هذا الأمر**");
-      if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};  //WESO#0001
+      if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};  IMADOX
  
       if(!clans[system[author.id].clan].applylist.includes(mention.id)) return message.channel.send("**# هذا الشخص لم يقم بالتقديم على دخول الكلان**");
  
-      clans[system[author.id].clan].applylist.shift(mention.id);  //WESO#0001
-      clans[system[author.id].clan].members.push(mention.id);  //WESO#0001
-      let clan = system[author.id].clan;  //WESO#0001
+      clans[system[author.id].clan].applylist.shift(mention.id);  IMADOX
+      clans[system[author.id].clan].members.push(mention.id);  IMADOX
+      let clan = system[author.id].clan;  IMADOX
  
  
-      system[mention.id] = {  //WESO#0001
+      system[mention.id] = {  IMADOX
         clan: clan,
-        joinedAt: new Date().toLocaleString(),  //WESO#0001
+        joinedAt: new Date().toLocaleString(),  IMADOX
         clanLevel: 0,
-        creator: clans[clan].creator  //WESO#0001
-      };  //WESO#0001
-   //WESO#0001
+        creator: clans[clan].creator  IMADOX
+      };  IMADOX
+   IMADOX
  
-      mention.send(`**# \`${system[author.id].clan}\`, لقد تم قبولك بالكلان**`).catch();  //WESO#0001
-      message.channel.send(`**# \`${mention.username}\`, لقد تم قبول الشخص ودخوله للكلان**`);  //WESO#0001
-    }  //WESO#0001
-    if(args[1] && args[1] === 'decline') {  //WESO#0001
-      let mention = message.mentions.users.first();  //WESO#0001
+      mention.send(`**# \`${system[author.id].clan}\`, لقد تم قبولك بالكلان**`).catch();  IMADOX
+      message.channel.send(`**# \`${mention.username}\`, لقد تم قبول الشخص ودخوله للكلان**`);  IMADOX
+    }  IMADOX
+    if(args[1] && args[1] === 'decline') {  IMADOX
+      let mention = message.mentions.users.first();  IMADOX
       if(system[author.id].clan === 'None') return message.channel.send("**# يجب عليك ان تكون بكلان لأستخدام هذا الأمر**");
       if(!clans[system[author.id].clan].admins.includes(message.author.id) && clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# يجب عليك ان تكون اداري بالكلان لأستخدام هذا الأمر**");
       if(!mention) return message.channel.send("**# يجب عليك منشنة شخص لأستخدام هذا الأمر**");
@@ -285,15 +281,15 @@ client.on('message',async message => {  //WESO#0001
  
       clans[system[author.id].clan].applylist.shift(mention.id);
  
-      system[mention.id] = {  //WESO#0001
-        clan: clans[system[author.id].clan],  //WESO#0001
+      system[mention.id] = {  IMADOX
+        clan: clans[system[author.id].clan],  IMADOX
         joinedAt: new Date().toLocaleString(),
-        clanLevel: 0  //WESO#0001
+        clanLevel: 0  IMADOX
       };
  
  
-      mention.send(`**# \`${system[author.id].clan}\`, لقد تم رفض دخولك للكلان**`).catch();  //WESO#0001
-      message.channel.send(`**# \`${mention.username}\`, لقد تم رفض دخول الشخص للكلان**`);  //WESO#0001
+      mention.send(`**# \`${system[author.id].clan}\`, لقد تم رفض دخولك للكلان**`).catch();  IMADOX
+      message.channel.send(`**# \`${mention.username}\`, لقد تم رفض دخول الشخص للكلان**`);  IMADOX
    //WESO#0001
     }
     if(args[1] && args[1] === 'promote') {
@@ -303,30 +299,30 @@ client.on('message',async message => {  //WESO#0001
       if(!mention) return message.channel.send("**# يجب عليك منشنة عضو بالكلان لأعطائه الترقية**");
       if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};
  
-      if(system[mention.id].clan === 'None') return message.channel.send("**# هذا الشخص ليس بكلان**");  //WESO#0001
-      if(!clans[system[author.id].clan].members.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس بالكلان**");  //WESO#0001
-      if(clans[system[author.id].clan].admins.includes(mention.id)) return message.channel.send("**# هذا العضو لديه ادمن بالفعل**");  //WESO#0001
-      if(mention.id === message.author.id) return message.channel.send("**# لا يمكنك اعطاء نفسك ترقية**");  //WESO#0001
+      if(system[mention.id].clan === 'None') return message.channel.send("**# هذا الشخص ليس بكلان**");  IMADOX
+      if(!clans[system[author.id].clan].members.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس بالكلان**"); IMADOX
+      if(clans[system[author.id].clan].admins.includes(mention.id)) return message.channel.send("**# هذا العضو لديه ادمن بالفعل**");  IMADOX
+      if(mention.id === message.author.id) return message.channel.send("**# لا يمكنك اعطاء نفسك ترقية**");  IMADOX
  
-      clans[system[author.id].clan].admins.push(mention.id);  //WESO#0001
+      clans[system[author.id].clan].admins.push(mention.id);  IMADOX
  
  
-      mention.send(`**# \`${system[author.id].clan}\`, لقد تم ترقيتك الى ادمن**`).catch();  //WESO#0001
-      message.channel.send(`**# \`${mention.username}\`, لقد تم ترقية العضو الى رتبة ادمن**`);  //WESO#0001
+      mention.send(`**# \`${system[author.id].clan}\`, لقد تم ترقيتك الى ادمن**`).catch();  IMADOX
+      message.channel.send(`**# \`${mention.username}\`, لقد تم ترقية العضو الى رتبة ادمن**`);  IMADOX
     }  //WESO#0001
-    if(args[1] && args[1] === 'demote') {  //WESO#0001
-      let mention = message.mentions.users.first();  //WESO#0001
-      if(system[author.id].clan === 'None') return message.channel.send("**# يجب ان تكون بكلان لأستخدام هذا الأمر**");  //WESO#0001
-      if(clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# هذا الأمر لضاحب الكلان فقط**");  //WESO#0001
-      if(!mention) return message.channel.send("**# يجب عليك منشنة عضو بالكلان لأعطائه الترقية**");  //WESO#0001
-      if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};  //WESO#0001
+    if(args[1] && args[1] === 'demote') {  IMADOX
+      let mention = message.mentions.users.first();  IMADOX
+      if(system[author.id].clan === 'None') return message.channel.send("**# يجب ان تكون بكلان لأستخدام هذا الأمر**");  IMADOX
+      if(clans[system[author.id].clan].creator !== message.author.id) return message.channel.send("**# هذا الأمر لضاحب الكلان فقط**");  IMADOX
+      if(!mention) return message.channel.send("**# يجب عليك منشنة عضو بالكلان لأعطائه الترقية**");  IMADOX
+      if(!system[mention.id]) system[mention.id] = {clan: 'None',joinedAt: new Date().toLocaleString() ,clanLevel: 0};  IMADOX
    //WESO#0001
-      if(system[mention.id].clan === 'None') return message.channel.send("**# هذا الشخص ليس بكلان**");  //WESO#0001
-      if(!clans[system[author.id].clan].members.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس بالكلان**");  //WESO#0001
-      if(!clans[system[author.id].clan].admins.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس ادمن بالكلان**");  //WESO#0001
-      if(mention.id === message.author.id) return message.channel.send("**# لا يمكنك اعطاء نفسك ترقية**");  //WESO#0001
+      if(system[mention.id].clan === 'None') return message.channel.send("**# هذا الشخص ليس بكلان**");  IMADOX
+      if(!clans[system[author.id].clan].members.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس بالكلان**");  IMADOX
+      if(!clans[system[author.id].clan].admins.includes(mention.id)) return message.channel.send("**# هذا الشخص ليس ادمن بالكلان**");  IMADOX
+      if(mention.id === message.author.id) return message.channel.send("**# لا يمكنك اعطاء نفسك ترقية**");  IMADOX
    //WESO#0001
-      clans[system[author.id].clan].admins.shift(mention.id);  //WESO#0001
+      clans[system[author.id].clan].admins.shift(mention.id);  IMADOX
  
       mention.send(`**# \`${system[author.id].clan}\`, لقد تم ازالتك من منصب الادمن**`).catch();
       message.channel.send(`**# \`${mention.username}\`, لقد تم ازالة الادمنية من العضو**`);
@@ -3681,7 +3677,7 @@ reaction1.on("collect", r => {
 『-rules ====> يعرض لك قوانين السيرفر
 『-v2min ====> لصنع روم صوتي مؤقت
 『-inv ====> لدعوة البوت الى سيرفرك
-『 By ====> WESO#0001
+『 By ====> IMADOX
 **
 `)
    message.author.sendEmbed(embed)
@@ -3739,7 +3735,7 @@ reaction2.on("collect", r => {
 『-unmutechannel ====> فتح الشات
 『-ct <name> ====> انشاء شات
 『-cv <name> ====> انشاء رووم فويس
-『 By ====> WESO#0001
+『 By ====> IMADOX
 **
 `)
    message.author.sendEmbed(embed)
@@ -3777,7 +3773,7 @@ reaction3.on("collect", r => {
 『-لعبة مريم ====> مريم
 『-عواصم
 『-يعطيك عقابات قاسية ====> عقاب
-『 By ====> WESO#0001
+『 By ====> IMADOX
 `)
    message.author.sendEmbed(embed)
    message.reply('تم ارسالك بلخاص')
